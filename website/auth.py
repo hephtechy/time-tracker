@@ -56,11 +56,11 @@ def the_time():
 
 def mail_HR(user):
     if user.sign_in_status == True:
-        msg = Message('Office Attendance', sender = 'temiseese23@gmail.com', recipients = ['adekimisimi@gmail.com', 'emanueloyekanmi@gmail.com'])
+        msg = Message('Office Attendance', sender = 'temiseese23@gmail.com', recipients = ['emanueloyekanmi@gmail.com'])
         msg.body = "Good day HR Mgr \n{} {} just signed in!!!".format(user.first_name, user.last_name)
         mail.send(msg)
     else:
-        msg = Message('Office Attendance', sender = 'temiseese23@gmail.com', recipients = ['adekimisimi@gmail.com', 'emanueloyekanmi@gmail.com'])
+        msg = Message('Office Attendance', sender = 'temiseese23@gmail.com', recipients = ['emanueloyekanmi@gmail.com'])
         msg.body = "Good day HR Mgr \n{} {} just signed out!!!".format(user.first_name, user.last_name)
         mail.send(msg)
     return "HR mailed!!!"
